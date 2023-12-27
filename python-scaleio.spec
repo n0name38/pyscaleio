@@ -2,7 +2,7 @@
 %global project_description %{expand:
 Python library that provides convenient way to interact with ScaleIO/VxFlex REST API.}
 %define buildid @BUILDID@
-%if 0%{?el8}
+%if 0%{?el8} || 0%{?redos}
 %global el_python3_pkgversion 3
 %else
 %global el_python3_pkgversion 36
@@ -10,7 +10,7 @@ Python library that provides convenient way to interact with ScaleIO/VxFlex REST
 
 Name:    python-scaleio
 Version: 0.1.11
-Release: 1.CROC3%{?buildid}%{?dist}
+Release: 1.CROC3_REDOS_TEST1%{?buildid}%{?dist}
 Summary: ScaleIO/VxFlex API client
 
 Group:   Development/Tools
